@@ -1,8 +1,10 @@
 import express from "express";
-import { newUser } from "../controllers/user.controller.js";
+import { deleteUser, getAllUser, newUser, singleUser } from "../controllers/user.controller.js";
+import { adminOnly } from "../middleware/auth.js";
 
 const app = express.Router();
 
-app.post("/register", newUser);
-
+app.post("/login", newUser);
+app.get("/all",adminOnly,getAllUser);
+app.route("/:id").get(singleUser).delete(deleteUser)
 export default app;

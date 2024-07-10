@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 import validator from "validator";
 const schema = new mongoose.Schema({
-    _id: {
-        type: String,
-        required: [true, "Please enter ID"],
-    },
     name: {
         type: String,
         required: [true, "Please enter Name"],

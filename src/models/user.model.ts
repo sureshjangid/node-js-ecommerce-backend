@@ -17,10 +17,6 @@ interface IUser extends Document {
 
 const schema = new mongoose.Schema(
   {
-    _id: {
-      type: String,
-      required: [true, "Please enter ID"],
-    },
     name: {
       type: String,
       required: [true, "Please enter Name"],
